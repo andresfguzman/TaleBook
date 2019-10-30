@@ -15,6 +15,8 @@
 		7E6D856F236A490F006CC679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D856E236A490F006CC679 /* Assets.xcassets */; };
 		7E6D8572236A490F006CC679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D8570236A490F006CC679 /* LaunchScreen.storyboard */; };
 		7E6D857D236A490F006CC679 /* TaleBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D857C236A490F006CC679 /* TaleBookTests.swift */; };
+		7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D858A236A4CE4006CC679 /* PostViewCell.swift */; };
+		7E6D858D236A4CE4006CC679 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D858B236A4CE4006CC679 /* PostViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		7E6D8578236A490F006CC679 /* TaleBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaleBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6D857C236A490F006CC679 /* TaleBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaleBookTests.swift; sourceTree = "<group>"; };
 		7E6D857E236A490F006CC679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E6D858A236A4CE4006CC679 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
+		7E6D858B236A4CE4006CC679 /* PostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewCell.xib; sourceTree = "<group>"; };
 		95B987A537EFD56DC4214188 /* Pods-TaleBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBook.release.xcconfig"; path = "Target Support Files/Pods-TaleBook/Pods-TaleBook.release.xcconfig"; sourceTree = "<group>"; };
 		E33ACD1A8F9E2F8C0510AFF6 /* Pods_TaleBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 		7E6D8566236A490E006CC679 /* TaleBook */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D8587236A4C2C006CC679 /* PostViewCell */,
 				7E6D8567236A490E006CC679 /* AppDelegate.swift */,
 				7E6D8569236A490E006CC679 /* ViewController.swift */,
 				7E6D856B236A490E006CC679 /* Main.storyboard */,
@@ -117,6 +122,15 @@
 			path = TaleBookTests;
 			sourceTree = "<group>";
 		};
+		7E6D8587236A4C2C006CC679 /* PostViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D858A236A4CE4006CC679 /* PostViewCell.swift */,
+				7E6D858B236A4CE4006CC679 /* PostViewCell.xib */,
+			);
+			path = PostViewCell;
+			sourceTree = "<group>";
+		};
 		A78E46E0F2AF040FAD3093A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +139,6 @@
 				24EC787BD9237EDC301A5B94 /* Pods-TaleBookTests.debug.xcconfig */,
 				318D3A2A1DE9E3550F93851F /* Pods-TaleBookTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +227,7 @@
 			files = (
 				7E6D8572236A490F006CC679 /* LaunchScreen.storyboard in Resources */,
 				7E6D856F236A490F006CC679 /* Assets.xcassets in Resources */,
+				7E6D858D236A4CE4006CC679 /* PostViewCell.xib in Resources */,
 				7E6D856D236A490E006CC679 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */,
 				7E6D856A236A490E006CC679 /* ViewController.swift in Sources */,
 				7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */,
 			);
