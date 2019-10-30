@@ -17,6 +17,11 @@
 		7E6D857D236A490F006CC679 /* TaleBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D857C236A490F006CC679 /* TaleBookTests.swift */; };
 		7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D858A236A4CE4006CC679 /* PostViewCell.swift */; };
 		7E6D858D236A4CE4006CC679 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D858B236A4CE4006CC679 /* PostViewCell.xib */; };
+		7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D858F236A555C006CC679 /* SocialMediaPost.swift */; };
+		7E6D8592236A55D2006CC679 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8591236A55D2006CC679 /* Author.swift */; };
+		7E6D8594236A5646006CC679 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8593236A5646006CC679 /* PostText.swift */; };
+		7E6D8596236A5670006CC679 /* Markup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8595236A5670006CC679 /* Markup.swift */; };
+		7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8597236A5716006CC679 /* PostAttachment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		7E6D857E236A490F006CC679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6D858A236A4CE4006CC679 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		7E6D858B236A4CE4006CC679 /* PostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewCell.xib; sourceTree = "<group>"; };
+		7E6D858F236A555C006CC679 /* SocialMediaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaPost.swift; sourceTree = "<group>"; };
+		7E6D8591236A55D2006CC679 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		7E6D8593236A5646006CC679 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
+		7E6D8595236A5670006CC679 /* Markup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markup.swift; sourceTree = "<group>"; };
+		7E6D8597236A5716006CC679 /* PostAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAttachment.swift; sourceTree = "<group>"; };
 		95B987A537EFD56DC4214188 /* Pods-TaleBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBook.release.xcconfig"; path = "Target Support Files/Pods-TaleBook/Pods-TaleBook.release.xcconfig"; sourceTree = "<group>"; };
 		E33ACD1A8F9E2F8C0510AFF6 /* Pods_TaleBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,6 +112,7 @@
 		7E6D8566236A490E006CC679 /* TaleBook */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D858E236A5544006CC679 /* Entities */,
 				7E6D8587236A4C2C006CC679 /* PostViewCell */,
 				7E6D8567236A490E006CC679 /* AppDelegate.swift */,
 				7E6D8569236A490E006CC679 /* ViewController.swift */,
@@ -129,6 +140,18 @@
 				7E6D858B236A4CE4006CC679 /* PostViewCell.xib */,
 			);
 			path = PostViewCell;
+			sourceTree = "<group>";
+		};
+		7E6D858E236A5544006CC679 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D858F236A555C006CC679 /* SocialMediaPost.swift */,
+				7E6D8591236A55D2006CC679 /* Author.swift */,
+				7E6D8593236A5646006CC679 /* PostText.swift */,
+				7E6D8595236A5670006CC679 /* Markup.swift */,
+				7E6D8597236A5716006CC679 /* PostAttachment.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		A78E46E0F2AF040FAD3093A5 /* Pods */ = {
@@ -293,9 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6D8594236A5646006CC679 /* PostText.swift in Sources */,
 				7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */,
+				7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */,
+				7E6D8596236A5670006CC679 /* Markup.swift in Sources */,
 				7E6D856A236A490E006CC679 /* ViewController.swift in Sources */,
 				7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */,
+				7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */,
+				7E6D8592236A55D2006CC679 /* Author.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
