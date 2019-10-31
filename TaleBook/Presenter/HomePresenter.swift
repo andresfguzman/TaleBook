@@ -13,13 +13,18 @@ final class HomePresenter {
     static let shared = HomePresenter()
     var posts: [SocialMediaPost] = []
     var currentPage = 1
+    weak var view: HomeView!
     
     func loadPosts() {
+        view.showLoadingView()
         let useCase = GetPostsImpl(service: GetPostsService())
         useCase.execute(forPage: currentPage, success: { [weak self] (posts) in
-            self?.posts = posts
-        }) { (errorString) in
-            print(errorString)
+            self?.view.hideLoadingView()
+            self?.posts.append(contentsOf: posts)
+            self?.view.updatePostList()
+        }) { [weak self] (errorString) in
+            self?.view.hideLoadingView()
+            self?.view.showErrorMessage(with: errorString)
         }
     }
 }
