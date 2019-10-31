@@ -22,6 +22,13 @@
 		7E6D8594236A5646006CC679 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8593236A5646006CC679 /* PostText.swift */; };
 		7E6D8596236A5670006CC679 /* Markup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8595236A5670006CC679 /* Markup.swift */; };
 		7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8597236A5716006CC679 /* PostAttachment.swift */; };
+		7E6D859B236A588B006CC679 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D859A236A588B006CC679 /* HomePresenter.swift */; };
+		7E6D859E236A5982006CC679 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D859D236A5982006CC679 /* GetPosts.swift */; };
+		7E6D85A0236A5AC5006CC679 /* GetPostsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D859F236A5AC5006CC679 /* GetPostsImpl.swift */; };
+		7E6D85A5236A5BF8006CC679 /* GetPostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */; };
+		7E6D85A7236A5DA3006CC679 /* UseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */; };
+		7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */; };
+		7E6D85AC236A6DF5006CC679 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85AB236A6DF5006CC679 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,13 @@
 		7E6D8593236A5646006CC679 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
 		7E6D8595236A5670006CC679 /* Markup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markup.swift; sourceTree = "<group>"; };
 		7E6D8597236A5716006CC679 /* PostAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAttachment.swift; sourceTree = "<group>"; };
+		7E6D859A236A588B006CC679 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		7E6D859D236A5982006CC679 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
+		7E6D859F236A5AC5006CC679 /* GetPostsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsImpl.swift; sourceTree = "<group>"; };
+		7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsService.swift; sourceTree = "<group>"; };
+		7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImpl.swift; sourceTree = "<group>"; };
+		7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		7E6D85AB236A6DF5006CC679 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../.Trash/Service.swift; sourceTree = "<group>"; };
 		95B987A537EFD56DC4214188 /* Pods-TaleBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBook.release.xcconfig"; path = "Target Support Files/Pods-TaleBook/Pods-TaleBook.release.xcconfig"; sourceTree = "<group>"; };
 		E33ACD1A8F9E2F8C0510AFF6 /* Pods_TaleBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +126,10 @@
 		7E6D8566236A490E006CC679 /* TaleBook */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D85A8236A60E0006CC679 /* Extension */,
+				7E6D85A1236A5B62006CC679 /* Services */,
+				7E6D859C236A595E006CC679 /* UseCases */,
+				7E6D8599236A5871006CC679 /* Presenter */,
 				7E6D858E236A5544006CC679 /* Entities */,
 				7E6D8587236A4C2C006CC679 /* PostViewCell */,
 				7E6D8567236A490E006CC679 /* AppDelegate.swift */,
@@ -152,6 +170,41 @@
 				7E6D8597236A5716006CC679 /* PostAttachment.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		7E6D8599236A5871006CC679 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D859A236A588B006CC679 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7E6D859C236A595E006CC679 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */,
+				7E6D859D236A5982006CC679 /* GetPosts.swift */,
+				7E6D859F236A5AC5006CC679 /* GetPostsImpl.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		7E6D85A1236A5B62006CC679 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D85AB236A6DF5006CC679 /* Service.swift */,
+				7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7E6D85A8236A60E0006CC679 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A78E46E0F2AF040FAD3093A5 /* Pods */ = {
@@ -316,12 +369,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6D859E236A5982006CC679 /* GetPosts.swift in Sources */,
 				7E6D8594236A5646006CC679 /* PostText.swift in Sources */,
+				7E6D85AC236A6DF5006CC679 /* Service.swift in Sources */,
 				7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */,
 				7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */,
 				7E6D8596236A5670006CC679 /* Markup.swift in Sources */,
+				7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */,
+				7E6D85A0236A5AC5006CC679 /* GetPostsImpl.swift in Sources */,
 				7E6D856A236A490E006CC679 /* ViewController.swift in Sources */,
+				7E6D85A5236A5BF8006CC679 /* GetPostsService.swift in Sources */,
+				7E6D85A7236A5DA3006CC679 /* UseCaseImpl.swift in Sources */,
 				7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */,
+				7E6D859B236A588B006CC679 /* HomePresenter.swift in Sources */,
 				7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */,
 				7E6D8592236A55D2006CC679 /* Author.swift in Sources */,
 			);

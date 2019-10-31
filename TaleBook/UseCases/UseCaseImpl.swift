@@ -1,5 +1,5 @@
 //
-//  Markup.swift
+//  UseCaseImpl.swift
 //  TaleBook
 //
 //  Created by Andrés Guzmán on 30/10/19.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct Markup: Codable {
-    let location: Int?
-    let length: Int?
-    let link: URL?
+protocol UseCaseImpl {
+    var service: Service { get }
 }

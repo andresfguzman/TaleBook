@@ -1,5 +1,5 @@
 //
-//  Markup.swift
+//  Service.swift
 //  TaleBook
 //
 //  Created by Andrés Guzmán on 30/10/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Markup: Codable {
-    let location: Int?
-    let length: Int?
-    let link: URL?
+
+
+protocol Service {
+    var endpoint: URL { get set }
 }

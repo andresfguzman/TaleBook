@@ -9,7 +9,13 @@
 import Foundation
 
 struct PostAttachment: Codable {
-    let pictureLink: URL
-    let width: Float
-    let height: Float
+    let pictureLink: URL?
+    let width: Double?
+    let height: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case pictureLink = "picture-link"
+        case width
+        case height
+    }
 }

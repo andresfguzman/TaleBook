@@ -9,8 +9,15 @@
 import Foundation
 
 struct Author: Codable {
-    let account: String
-    let isVerified: Bool
-    let name: String
-    let pictureLink: URL
+    let account: String?
+    let isVerified: Bool?
+    let name: String?
+    let pictureLink: URL?
+    
+    enum CodingKeys: String, CodingKey {
+        case account
+        case isVerified = "is-verified"
+        case name
+        case pictureLink = "picture-link"
+    }
 }
