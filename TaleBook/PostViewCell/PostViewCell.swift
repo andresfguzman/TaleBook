@@ -35,22 +35,22 @@ class PostViewCell: UITableViewCell {
         profilePicture.image = nil
     }
     
-    func configure(with post: SocialMediaPost) {
+    func configure(with post: PostCellViewModel) {
         reset()
         self.contentViewCell.addRoundedCorner()
-        self.profilePicture.setImage(from: post.author.pictureLink)
-        self.networkAccount.text = post.author.account
-        self.userName.text = post.author.name
+        self.profilePicture.setImage(from: post.authorProfilePic)
+        self.networkAccount.text = post.authorAccount
+        self.userName.text = post.authorName
         
-        self.verificationStatus.text = post.author.isVerified ? "X" : " "
+        self.verificationStatus.text = post.verifiedAccount ? "X" : " "
         
-        self.textPost.text = post.text?.plain
-        if let postImage = post.attachment?.pictureLink {
+        self.textPost.text = post.text
+        if let postImage = post.postPicture {
             self.imagePost.isHidden = false
             self.imagePost.setImage(from: postImage)
         } else {
             self.imagePost.isHidden = true
         }
-        self.datePost.text = post.getFormattedDate()
+        self.datePost.text = post.date
     }
 }

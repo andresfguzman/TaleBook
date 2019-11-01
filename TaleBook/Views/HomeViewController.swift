@@ -44,8 +44,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = PostCellViewModel(with: presenter.posts[indexPath.section])
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostViewCell.self), for: indexPath) as! PostViewCell
-        cell.configure(with: presenter.posts[indexPath.section])
+        cell.configure(with: viewModel)
         return cell
     }
 }

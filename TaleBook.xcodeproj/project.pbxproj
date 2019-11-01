@@ -14,6 +14,8 @@
 		7E40E758236CB1E100F81A8F /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */; };
 		7E40E75A236CBFDD00F81A8F /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */; };
 		7E40E75D236CC30B00F81A8F /* TBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E75C236CC30B00F81A8F /* TBConstants.swift */; };
+		7E40E75F236CC5DC00F81A8F /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E75E236CC5DC00F81A8F /* PostCellViewModel.swift */; };
+		7E40E761236CCA8D00F81A8F /* DateFormatter+TBStringFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E760236CCA8D00F81A8F /* DateFormatter+TBStringFormatted.swift */; };
 		7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8567236A490E006CC679 /* AppDelegate.swift */; };
 		7E6D856A236A490E006CC679 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8569236A490E006CC679 /* HomeViewController.swift */; };
 		7E6D856D236A490E006CC679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D856B236A490E006CC679 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
 		7E40E75C236CC30B00F81A8F /* TBConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBConstants.swift; sourceTree = "<group>"; };
+		7E40E75E236CC5DC00F81A8F /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
+		7E40E760236CCA8D00F81A8F /* DateFormatter+TBStringFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TBStringFormatted.swift"; sourceTree = "<group>"; };
 		7E6D8564236A490E006CC679 /* TaleBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6D8567236A490E006CC679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E6D8569236A490E006CC679 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				7E6D858A236A4CE4006CC679 /* PostViewCell.swift */,
 				7E6D858B236A4CE4006CC679 /* PostViewCell.xib */,
+				7E40E75E236CC5DC00F81A8F /* PostCellViewModel.swift */,
 			);
 			path = PostViewCell;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */,
 				7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */,
 				7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */,
+				7E40E760236CCA8D00F81A8F /* DateFormatter+TBStringFormatted.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,11 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E40E761236CCA8D00F81A8F /* DateFormatter+TBStringFormatted.swift in Sources */,
 				7E6D859E236A5982006CC679 /* GetPosts.swift in Sources */,
 				7E6D8594236A5646006CC679 /* PostText.swift in Sources */,
 				7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */,
 				7E215CC1236BCDF10076491F /* BaseService.swift in Sources */,
 				7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */,
+				7E40E75F236CC5DC00F81A8F /* PostCellViewModel.swift in Sources */,
 				7E6D8596236A5670006CC679 /* Markup.swift in Sources */,
 				7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */,
 				7E40E75D236CC30B00F81A8F /* TBConstants.swift in Sources */,

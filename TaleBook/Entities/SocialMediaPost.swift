@@ -16,15 +16,3 @@ struct SocialMediaPost: Codable {
     let text: PostText?
     let attachment: PostAttachment?
 }
-
-extension SocialMediaPost {
-    func getFormattedDate() -> String{
-        
-        let dateFormatter = DateFormatter()
-        let date = ISO8601DateFormatter().date(from:self.date)!
-        dateFormatter.dateFormat = TBConstants.shared.cellDateFormatString
-        dateFormatter.locale = Locale.current
-        dateFormatter.timeZone = TimeZone.current
-        return "\(dateFormatter.string(from: date))"
-    }
-}

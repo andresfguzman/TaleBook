@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum SocialNetwork: String {
+    case twitter
+    case facebook
+    case instagram
+}
+
 final class TBConstants {
     
     public static let shared = TBConstants()
