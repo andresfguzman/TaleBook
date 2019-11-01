@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		7E215CBC236BCB140076491F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E215CBB236BCB140076491F /* Service.swift */; };
 		7E215CC1236BCDF10076491F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E215CC0236BCDF10076491F /* BaseService.swift */; };
 		7E40E758236CB1E100F81A8F /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */; };
+		7E40E75A236CBFDD00F81A8F /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */; };
+		7E40E75D236CC30B00F81A8F /* TBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E75C236CC30B00F81A8F /* TBConstants.swift */; };
 		7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8567236A490E006CC679 /* AppDelegate.swift */; };
 		7E6D856A236A490E006CC679 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8569236A490E006CC679 /* HomeViewController.swift */; };
 		7E6D856D236A490E006CC679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D856B236A490E006CC679 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		7E215CBB236BCB140076491F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7E215CC0236BCDF10076491F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
+		7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
+		7E40E75C236CC30B00F81A8F /* TBConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBConstants.swift; sourceTree = "<group>"; };
 		7E6D8564236A490E006CC679 /* TaleBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6D8567236A490E006CC679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E6D8569236A490E006CC679 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E40E75B236CC2F500F81A8F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7E40E75C236CC30B00F81A8F /* TBConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		7E6D855B236A490E006CC679 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 		7E6D8566236A490E006CC679 /* TaleBook */ = {
 			isa = PBXGroup;
 			children = (
+				7E40E75B236CC2F500F81A8F /* Constants */,
 				7E6D85AD236B877E006CC679 /* Views */,
 				7E6D85A8236A60E0006CC679 /* Extension */,
 				7E6D85A1236A5B62006CC679 /* Services */,
@@ -211,6 +224,7 @@
 			children = (
 				7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */,
 				7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */,
+				7E40E759236CBFDD00F81A8F /* UIView+RoundedCorners.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -393,6 +407,7 @@
 				7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */,
 				7E6D8596236A5670006CC679 /* Markup.swift in Sources */,
 				7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */,
+				7E40E75D236CC30B00F81A8F /* TBConstants.swift in Sources */,
 				7E6D85A0236A5AC5006CC679 /* GetPostsImpl.swift in Sources */,
 				7E6D856A236A490E006CC679 /* HomeViewController.swift in Sources */,
 				7E6D85A5236A5BF8006CC679 /* GetPostsService.swift in Sources */,
@@ -401,6 +416,7 @@
 				7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */,
 				7E6D859B236A588B006CC679 /* HomePresenter.swift in Sources */,
 				7E6D85AF236B87B1006CC679 /* HomeView.swift in Sources */,
+				7E40E75A236CBFDD00F81A8F /* UIView+RoundedCorners.swift in Sources */,
 				7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */,
 				7E6D8592236A55D2006CC679 /* Author.swift in Sources */,
 				7E40E758236CB1E100F81A8F /* UIImageView+Loader.swift in Sources */,

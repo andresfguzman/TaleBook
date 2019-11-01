@@ -105,6 +105,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentViewCell" destination="H2p-sc-9uM" id="6aa-Fw-XKF"/>
                 <outlet property="datePost" destination="boR-2O-KQp" id="js9-Fk-DYT"/>
                 <outlet property="imagePost" destination="Jtf-IP-Wdn" id="mjr-Mk-ZUi"/>
                 <outlet property="networkAccount" destination="49h-Fr-y4O" id="8WA-Lh-cfY"/>

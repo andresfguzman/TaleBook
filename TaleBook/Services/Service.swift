@@ -23,6 +23,6 @@ protocol Service {
 
 extension Service {
     var baseURL: URL {
-        return URL(string: "https://storage.googleapis.com/cdn-og-test-api/test-task/social/")!
+        return URL(string: TBConstants.shared.baseServiceURL)!
     }
 }

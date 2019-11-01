@@ -18,6 +18,7 @@ class PostViewCell: UITableViewCell {
     @IBOutlet weak var textPost: UILabel!
     @IBOutlet weak var imagePost: UIImageView!
     @IBOutlet weak var datePost: UILabel!
+    @IBOutlet weak var contentViewCell: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +37,7 @@ class PostViewCell: UITableViewCell {
     
     func configure(with post: SocialMediaPost) {
         reset()
-        
+        self.contentViewCell.addRoundedCorner()
         self.profilePicture.setImage(from: post.author.pictureLink)
         self.networkAccount.text = post.author.account
         self.userName.text = post.author.name
@@ -50,6 +51,6 @@ class PostViewCell: UITableViewCell {
         } else {
             self.imagePost.isHidden = true
         }
-        self.datePost.text = "on it \(String(describing: post.date))"
+        self.datePost.text = post.getFormattedDate()
     }
 }
