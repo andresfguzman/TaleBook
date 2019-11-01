@@ -16,14 +16,12 @@ final class HomePresenter {
     weak var view: HomeView!
     
     func loadPosts() {
-        view.showLoadingView()
         let useCase = GetPostsImpl(service: GetPostsService())
         useCase.execute(forPage: currentPage, success: { [weak self] (posts) in
-            self?.view.hideLoadingView()
             self?.posts.append(contentsOf: posts)
+            self?.view.stopPullToRefresh()
             self?.view.updatePostList()
         }) { [weak self] (errorString) in
-            self?.view.hideLoadingView()
             self?.view.showErrorMessage(with: errorString)
         }
     }

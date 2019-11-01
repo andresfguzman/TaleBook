@@ -11,6 +11,5 @@ import Foundation
 protocol HomeView: class {
     func updatePostList()
     func showErrorMessage(with error: String)
-    func showLoadingView()
-    func hideLoadingView()
+    func stopPullToRefresh()
 }

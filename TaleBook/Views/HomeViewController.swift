@@ -12,15 +12,24 @@ import SafariServices
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var postsTableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     
     let presenter = HomePresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Data")
         postsTableView.register(UINib(nibName: String(describing: PostViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PostViewCell.self))
         postsTableView.delegate = self
         postsTableView.dataSource = self
+        postsTableView.refreshControl = refreshControl
         presenter.view = self
+        self.refreshControl.beginRefreshing()
+        presenter.loadPosts()
+    }
+    
+    @objc private func refreshPosts(_ sender: Any) {
         presenter.loadPosts()
     }
     
@@ -75,11 +84,9 @@ extension HomeViewController: HomeView {
         // TODO: Implement this functionality
     }
     
-    func showLoadingView() {
-        // TODO: Implement this functionality
-    }
-    
-    func hideLoadingView() {
-        // TODO: Implement this functionality
+    func stopPullToRefresh() {
+        DispatchQueue.main.async { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }
     }
 }
