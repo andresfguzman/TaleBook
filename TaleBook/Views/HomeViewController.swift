@@ -31,7 +31,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostViewCell.self), for: indexPath) as! PostViewCell
-        
+        cell.configure(with: presenter.posts[indexPath.row])
         return cell
     }
 }
@@ -41,7 +41,6 @@ extension HomeViewController: HomeView {
         DispatchQueue.main.async {
             self.postsTableView.reloadData()
         }
-        // TODO: Update tableview with the new data.
     }
     
     func showErrorMessage(with error: String) {

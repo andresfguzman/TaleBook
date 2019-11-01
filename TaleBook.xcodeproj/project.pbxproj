@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1DAD4FCD04BFFD216A0AD3C3 /* Pods_TaleBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E02162586915246DE1A5978 /* Pods_TaleBookTests.framework */; };
 		6BFFD898951875B236773A08 /* Pods_TaleBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33ACD1A8F9E2F8C0510AFF6 /* Pods_TaleBook.framework */; };
+		7E215CBC236BCB140076491F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E215CBB236BCB140076491F /* Service.swift */; };
+		7E215CC1236BCDF10076491F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E215CC0236BCDF10076491F /* BaseService.swift */; };
+		7E40E758236CB1E100F81A8F /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */; };
 		7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8567236A490E006CC679 /* AppDelegate.swift */; };
 		7E6D856A236A490E006CC679 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D8569236A490E006CC679 /* HomeViewController.swift */; };
 		7E6D856D236A490E006CC679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6D856B236A490E006CC679 /* Main.storyboard */; };
@@ -28,7 +31,6 @@
 		7E6D85A5236A5BF8006CC679 /* GetPostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */; };
 		7E6D85A7236A5DA3006CC679 /* UseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */; };
 		7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */; };
-		7E6D85AC236A6DF5006CC679 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85AB236A6DF5006CC679 /* Service.swift */; };
 		7E6D85AF236B87B1006CC679 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D85AE236B87B1006CC679 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 		24EC787BD9237EDC301A5B94 /* Pods-TaleBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBookTests.debug.xcconfig"; path = "Target Support Files/Pods-TaleBookTests/Pods-TaleBookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		299894A92DD4B0D02D31AB60 /* Pods-TaleBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBook.debug.xcconfig"; path = "Target Support Files/Pods-TaleBook/Pods-TaleBook.debug.xcconfig"; sourceTree = "<group>"; };
 		318D3A2A1DE9E3550F93851F /* Pods-TaleBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBookTests.release.xcconfig"; path = "Target Support Files/Pods-TaleBookTests/Pods-TaleBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E215CBB236BCB140076491F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7E215CC0236BCDF10076491F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		7E6D8564236A490E006CC679 /* TaleBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6D8567236A490E006CC679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E6D8569236A490E006CC679 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsService.swift; sourceTree = "<group>"; };
 		7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImpl.swift; sourceTree = "<group>"; };
 		7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
-		7E6D85AB236A6DF5006CC679 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../.Trash/Service.swift; sourceTree = "<group>"; };
 		7E6D85AE236B87B1006CC679 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95B987A537EFD56DC4214188 /* Pods-TaleBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleBook.release.xcconfig"; path = "Target Support Files/Pods-TaleBook/Pods-TaleBook.release.xcconfig"; sourceTree = "<group>"; };
 		E33ACD1A8F9E2F8C0510AFF6 /* Pods_TaleBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +199,8 @@
 		7E6D85A1236A5B62006CC679 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7E6D85AB236A6DF5006CC679 /* Service.swift */,
+				7E215CBB236BCB140076491F /* Service.swift */,
+				7E215CC0236BCDF10076491F /* BaseService.swift */,
 				7E6D85A4236A5BF8006CC679 /* GetPostsService.swift */,
 			);
 			path = Services;
@@ -204,6 +209,7 @@
 		7E6D85A8236A60E0006CC679 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7E40E757236CB1E100F81A8F /* UIImageView+Loader.swift */,
 				7E6D85A9236A611D006CC679 /* URLSessionExtension.swift */,
 			);
 			path = Extension;
@@ -382,20 +388,22 @@
 			files = (
 				7E6D859E236A5982006CC679 /* GetPosts.swift in Sources */,
 				7E6D8594236A5646006CC679 /* PostText.swift in Sources */,
-				7E6D85AC236A6DF5006CC679 /* Service.swift in Sources */,
 				7E6D858C236A4CE4006CC679 /* PostViewCell.swift in Sources */,
+				7E215CC1236BCDF10076491F /* BaseService.swift in Sources */,
 				7E6D8590236A555C006CC679 /* SocialMediaPost.swift in Sources */,
 				7E6D8596236A5670006CC679 /* Markup.swift in Sources */,
 				7E6D85AA236A611D006CC679 /* URLSessionExtension.swift in Sources */,
 				7E6D85A0236A5AC5006CC679 /* GetPostsImpl.swift in Sources */,
 				7E6D856A236A490E006CC679 /* HomeViewController.swift in Sources */,
 				7E6D85A5236A5BF8006CC679 /* GetPostsService.swift in Sources */,
+				7E215CBC236BCB140076491F /* Service.swift in Sources */,
 				7E6D85A7236A5DA3006CC679 /* UseCaseImpl.swift in Sources */,
 				7E6D8568236A490E006CC679 /* AppDelegate.swift in Sources */,
 				7E6D859B236A588B006CC679 /* HomePresenter.swift in Sources */,
 				7E6D85AF236B87B1006CC679 /* HomeView.swift in Sources */,
 				7E6D8598236A5716006CC679 /* PostAttachment.swift in Sources */,
 				7E6D8592236A55D2006CC679 /* Author.swift in Sources */,
+				7E40E758236CB1E100F81A8F /* UIImageView+Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,21 @@
 
 import Foundation
 
-
+enum APIServiceError: Error {
+    case apiError
+    case invalidEndpoint
+    case invalidResponse
+    case noData
+    case decodeError
+}
 
 protocol Service {
-    var endpoint: URL { get set }
+    var baseURL: URL { get }
+    func fetchResources<T: Decodable>(url: URL, completion: @escaping (Result<T, APIServiceError>) -> Void)
+}
+
+extension Service {
+    var baseURL: URL {
+        return URL(string: "https://storage.googleapis.com/cdn-og-test-api/test-task/social/")!
+    }
 }

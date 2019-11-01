@@ -10,9 +10,9 @@ import Foundation
 
 struct Author: Codable {
     let account: String?
-    let isVerified: Bool?
-    let name: String?
-    let pictureLink: URL?
+    let isVerified: Bool
+    let name: String
+    let pictureLink: URL
     
     enum CodingKeys: String, CodingKey {
         case account
