@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,14 @@ class HomeViewController: UIViewController {
         postsTableView.dataSource = self
         presenter.view = self
         presenter.loadPosts()
+    }
+    
+    private func openPost(_ post: SocialMediaPost) {
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        
+        let vc = SFSafariViewController(url: post.link, configuration: config)
+        present(vc, animated: true)
     }
 }
 
@@ -48,6 +57,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostViewCell.self), for: indexPath) as! PostViewCell
         cell.configure(with: viewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openPost(presenter.posts[indexPath.section])
     }
 }
 

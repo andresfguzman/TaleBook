@@ -33,38 +33,38 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-xU-Fbd">
-                                        <rect key="frame" x="78" y="12" width="214" height="46.5"/>
+                                        <rect key="frame" x="78" y="11.5" width="254" height="47.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Szc-2I-GIu">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="21.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jondoe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49h-Fr-y4O">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-vf-A2F">
-                                                        <rect key="frame" x="68.5" y="0.0" width="11.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="68.5" y="0.0" width="13" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jon Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEB-oq-beO">
-                                                <rect key="frame" x="0.0" y="28.5" width="57" height="18"/>
+                                                <rect key="frame" x="0.0" y="29.5" width="57" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SsL-KV-AcY">
-                                        <rect key="frame" x="300" y="10" width="60" height="50"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SsL-KV-AcY">
+                                        <rect key="frame" x="340" y="25" width="20" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="NbM-uA-wZd"/>
-                                            <constraint firstAttribute="width" constant="60" id="Y6e-Uu-Fmc"/>
+                                            <constraint firstAttribute="height" constant="20" id="NbM-uA-wZd"/>
+                                            <constraint firstAttribute="width" constant="20" id="Y6e-Uu-Fmc"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>

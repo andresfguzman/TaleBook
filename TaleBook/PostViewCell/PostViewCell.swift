@@ -38,11 +38,11 @@ class PostViewCell: UITableViewCell {
     func configure(with post: PostCellViewModel) {
         reset()
         self.contentViewCell.addRoundedCorner()
-        self.profilePicture.setImage(from: post.authorProfilePic)
+        self.profilePicture.setImage(from: post.authorProfilePic, with: UIImage(imageLiteralResourceName: "profilePlaceholder"))
         self.networkAccount.text = post.authorAccount
         self.userName.text = post.authorName
         
-        self.verificationStatus.text = post.verifiedAccount ? "X" : " "
+        self.verificationStatus.text = post.verifiedAccount ? "✓" : " "
         
         self.textPost.text = post.text
         if let postImage = post.postPicture {
@@ -52,5 +52,6 @@ class PostViewCell: UITableViewCell {
             self.imagePost.isHidden = true
         }
         self.datePost.text = post.date
+        self.networkIcon.image = UIImage(imageLiteralResourceName: post.network.stringValue)
     }
 }

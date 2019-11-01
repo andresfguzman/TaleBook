@@ -12,6 +12,20 @@ enum SocialNetwork: String {
     case twitter
     case facebook
     case instagram
+    case empty
+    
+    var stringValue: String {
+        switch self {
+        case .twitter:
+            return "twitter"
+        case .facebook:
+            return "facebook"
+        case .instagram:
+            return "instagram"
+        case .empty:
+            return "placeholder"
+        }
+    }
 }
 
 final class TBConstants {
