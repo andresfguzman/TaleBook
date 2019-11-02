@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.backgroundColor = TBConstants.shared.baseAppColor
         refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: TBConstants.shared.fetchingMessage)
         postsTableView.register(UINib(nibName: String(describing: PostViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PostViewCell.self))
@@ -54,7 +55,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = .clear
+        view.backgroundColor = TBConstants.shared.tbGrayColor
         return view
     }
     
@@ -91,18 +92,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: HomeView {
     func updatePostList() {
-        DispatchQueue.main.async {
-            self.postsTableView.reloadData()
-        }
+        postsTableView.reloadData()
     }
     
     func showErrorMessage(with error: String) {
-        // TODO: Implement this functionality
+        let alert = UIAlertController(title: TBConstants.shared.alertTittle, message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func stopPullToRefresh() {
-        DispatchQueue.main.async { [weak self] in
-            self?.refreshControl.endRefreshing()
-        }
+        refreshControl.endRefreshing()
     }
 }

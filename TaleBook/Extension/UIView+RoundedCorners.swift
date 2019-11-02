@@ -14,4 +14,9 @@ extension UIView {
         self.layer.borderWidth = borderThickness
         self.layer.borderColor = borderColor
     }
+    
+    func roundedView() {
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
+    }
 }

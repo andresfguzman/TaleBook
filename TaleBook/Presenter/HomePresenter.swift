@@ -20,11 +20,15 @@ final class HomePresenter {
         let useCase = GetPostsImpl(service: GetPostsService())
         useCase.execute(forPage: currentPage, success: { [weak self] (posts) in
             self?.posts.append(contentsOf: posts)
-            self?.view.stopPullToRefresh()
-            self?.view.updatePostList()
+            DispatchQueue.main.async {
+                self?.view.stopPullToRefresh()
+                self?.view.updatePostList()
+            }
         }) { [weak self] (errorString) in
-            self?.view.stopPullToRefresh()
-            self?.view.showErrorMessage(with: errorString)
+            DispatchQueue.main.async {
+                self?.view.stopPullToRefresh()
+                self?.view.showErrorMessage(with: errorString)
+            }
         }
     }
 }

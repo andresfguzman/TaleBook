@@ -25,7 +25,7 @@ struct PostCellViewModel {
         let dateFormatter = DateFormatter()
         date = dateFormatter.getFormattedTBDate(with: post.date)
         authorName = post.author.name
-        authorAccount = post.author.account ?? ""
+        authorAccount = "@\(post.author.account ?? "")"
         authorProfilePic = post.author.pictureLink
         verifiedAccount = post.author.isVerified
         text = post.text?.plain

@@ -38,19 +38,20 @@ class PostViewCell: UITableViewCell {
     func configure(with post: PostCellViewModel) {
         reset()
         self.contentViewCell.addRoundedCorner()
+        self.profilePicture.roundedView()
         self.profilePicture.load.request(with: post.authorProfilePic)
         self.networkAccount.text = post.authorAccount
         self.userName.text = post.authorName
-        
         self.verificationStatus.text = post.verifiedAccount ? "✓" : " "
-        
         self.textPost.text = post.text
+        
         if let postImage = post.postPicture {
             self.imagePost.isHidden = false
             self.imagePost.load.request(with: postImage)
         } else {
             self.imagePost.isHidden = true
         }
+        
         self.datePost.text = post.date
         self.networkIcon.image = UIImage(imageLiteralResourceName: post.network.stringValue)
     }
