@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Data")
+        refreshControl.attributedTitle = NSAttributedString(string: TBConstants.shared.fetchingMessage)
         postsTableView.register(UINib(nibName: String(describing: PostViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PostViewCell.self))
         postsTableView.delegate = self
         postsTableView.dataSource = self
@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func refreshPosts(_ sender: Any) {
+        presenter.currentPage = 1
         presenter.loadPosts()
     }
     
@@ -66,6 +67,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostViewCell.self), for: indexPath) as! PostViewCell
         cell.configure(with: viewModel)
         return cell
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        presenter.isDataLoading = false
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if ((postsTableView.contentOffset.y +
+            postsTableView.frame.size.height) >=
+            postsTableView.contentSize.height) && !presenter.isDataLoading {
+            presenter.isDataLoading = true
+            presenter.currentPage += presenter.currentPage
+            refreshControl.beginRefreshing()
+            presenter.loadPosts()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

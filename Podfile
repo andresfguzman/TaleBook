@@ -6,7 +6,8 @@ target 'TaleBook' do
   use_frameworks!
 
   # Pods for TaleBook
-
+  pod 'ImageLoader'
+  
   target 'TaleBookTests' do
     inherit! :search_paths
     # Pods for testing

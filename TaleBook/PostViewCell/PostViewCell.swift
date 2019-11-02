@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import ImageLoader
+import ImageLoader
 
 class PostViewCell: UITableViewCell {
     @IBOutlet weak var profilePicture: UIImageView!
@@ -38,7 +38,7 @@ class PostViewCell: UITableViewCell {
     func configure(with post: PostCellViewModel) {
         reset()
         self.contentViewCell.addRoundedCorner()
-        self.profilePicture.setImage(from: post.authorProfilePic, with: UIImage(imageLiteralResourceName: "profilePlaceholder"))
+        self.profilePicture.load.request(with: post.authorProfilePic)
         self.networkAccount.text = post.authorAccount
         self.userName.text = post.authorName
         
@@ -47,7 +47,7 @@ class PostViewCell: UITableViewCell {
         self.textPost.text = post.text
         if let postImage = post.postPicture {
             self.imagePost.isHidden = false
-            self.imagePost.setImage(from: postImage)
+            self.imagePost.load.request(with: postImage)
         } else {
             self.imagePost.isHidden = true
         }

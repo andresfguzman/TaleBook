@@ -14,6 +14,7 @@ final class HomePresenter {
     var posts: [SocialMediaPost] = []
     var currentPage = 1
     weak var view: HomeView!
+    var isDataLoading = false
     
     func loadPosts() {
         let useCase = GetPostsImpl(service: GetPostsService())
@@ -22,6 +23,7 @@ final class HomePresenter {
             self?.view.stopPullToRefresh()
             self?.view.updatePostList()
         }) { [weak self] (errorString) in
+            self?.view.stopPullToRefresh()
             self?.view.showErrorMessage(with: errorString)
         }
     }

@@ -41,4 +41,5 @@ final class TBConstants {
     
     let baseServiceURL = "https://storage.googleapis.com/cdn-og-test-api/test-task/social/"
     let cellDateFormatString = "EEEE, d MMMM yyyy"
+    let fetchingMessage = "Fetching Data"
 }
