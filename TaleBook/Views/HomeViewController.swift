@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var postsTableView: UITableView!
     private let refreshControl = UIRefreshControl()
     
-    let presenter = HomePresenter()
+    let presenter = HomePresenter.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +32,19 @@ class HomeViewController: UIViewController {
     
     @objc private func refreshPosts(_ sender: Any) {
         presenter.currentPage = 1
+        presenter.posts.removeAll()
+        postsTableView.reloadData()
         presenter.loadPosts()
     }
     
-    private func openPost(_ post: SocialMediaPost) {
+    private func openPost(_ post: SocialMediaPost, indexPath: IndexPath) {
         let config = SFSafariViewController.Configuration()
         config.entersReaderIfAvailable = true
         
         let vc = SFSafariViewController(url: post.link, configuration: config)
-        present(vc, animated: true)
+        self.present(vc, animated: true) { [weak self] in
+            self?.postsTableView.deselectRow(at: indexPath, animated: false)
+        }
     }
 }
 
@@ -70,15 +74,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        presenter.isDataLoading = false
-    }
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if ((postsTableView.contentOffset.y +
             postsTableView.frame.size.height) >=
             postsTableView.contentSize.height) && !presenter.isDataLoading {
-            presenter.isDataLoading = true
             presenter.currentPage += presenter.currentPage
             refreshControl.beginRefreshing()
             presenter.loadPosts()
@@ -86,7 +85,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openPost(presenter.posts[indexPath.section])
+        openPost(presenter.posts[indexPath.section], indexPath: indexPath)
     }
 }
 

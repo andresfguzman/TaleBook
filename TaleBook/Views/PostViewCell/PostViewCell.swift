@@ -15,7 +15,7 @@ class PostViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var verificationStatus: UILabel!
     @IBOutlet weak var networkIcon: UIImageView!
-    @IBOutlet weak var textPost: UILabel!
+    @IBOutlet weak var textPost: UITextView!
     @IBOutlet weak var imagePost: UIImageView!
     @IBOutlet weak var datePost: UILabel!
     @IBOutlet weak var contentViewCell: UIView!
@@ -26,8 +26,6 @@ class PostViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     fileprivate func reset() {
@@ -43,7 +41,8 @@ class PostViewCell: UITableViewCell {
         self.networkAccount.text = post.authorAccount
         self.userName.text = post.authorName
         self.verificationStatus.text = post.verifiedAccount ? "✓" : " "
-        self.textPost.text = post.text
+        self.textPost.attributedText = post.text
+        self.textPost.font = UIFont(name: textPost.font?.fontName ?? "Helvetica", size: 20.0)
         
         if let postImage = post.postPicture {
             self.imagePost.isHidden = false

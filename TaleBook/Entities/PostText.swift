@@ -9,6 +9,6 @@
 import Foundation
 
 struct PostText: Codable {
-    let plain: String?
-    let markup: [Markup]?
+    let plain: String
+    let markup: [Markup]
 }

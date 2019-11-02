@@ -9,7 +9,7 @@
 import Foundation
 
 struct Markup: Codable {
-    let location: Int?
-    let length: Int?
-    let link: URL?
+    let location: Int
+    let length: Int
+    let link: URL
 }

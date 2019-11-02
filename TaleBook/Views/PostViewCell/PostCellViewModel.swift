@@ -16,7 +16,7 @@ struct PostCellViewModel {
     let authorAccount: String
     let authorProfilePic: URL
     let verifiedAccount: Bool
-    let text: String?
+    let text: NSMutableAttributedString?
     let postPicture: URL?
     
     init(with post: SocialMediaPost) {
@@ -28,7 +28,13 @@ struct PostCellViewModel {
         authorAccount = "@\(post.author.account ?? "")"
         authorProfilePic = post.author.pictureLink
         verifiedAccount = post.author.isVerified
-        text = post.text?.plain
+        text = NSMutableAttributedString(string: post.text?.plain ?? "")
+        if let text = post.text {
+            for markup in text.markup {
+                self.text?.addAttribute(.link, value: markup.link, range: NSMakeRange(markup.location, markup.length))
+            }
+        }
         postPicture = post.attachment?.pictureLink
+        
     }
 }

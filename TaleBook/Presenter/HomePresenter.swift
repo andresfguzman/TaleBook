@@ -11,6 +11,7 @@ import Foundation
 final class HomePresenter {
     
     static let shared = HomePresenter()
+    
     var posts: [SocialMediaPost] = []
     var currentPage = 1
     weak var view: HomeView!
@@ -18,8 +19,10 @@ final class HomePresenter {
     
     func loadPosts() {
         let useCase = GetPostsImpl(service: GetPostsService())
+        self.isDataLoading = true
         useCase.execute(forPage: currentPage, success: { [weak self] (posts) in
             self?.posts.append(contentsOf: posts)
+            self?.isDataLoading = false
             DispatchQueue.main.async {
                 self?.view.stopPullToRefresh()
                 self?.view.updatePostList()
