@@ -118,6 +118,7 @@
 		7E40E75B236CC2F500F81A8F /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D85A8236A60E0006CC679 /* Extension */,
 				7E40E75C236CC30B00F81A8F /* TBConstants.swift */,
 			);
 			path = HelperClasses;
@@ -146,15 +147,12 @@
 		7E6D8566236A490E006CC679 /* TaleBook */ = {
 			isa = PBXGroup;
 			children = (
-				7E40E75B236CC2F500F81A8F /* HelperClasses */,
-				7E6D85AD236B877E006CC679 /* Views */,
-				7E6D85A8236A60E0006CC679 /* Extension */,
-				7E6D85A1236A5B62006CC679 /* Services */,
-				7E6D859C236A595E006CC679 /* UseCases */,
-				7E6D8599236A5871006CC679 /* Presenter */,
-				7E6D858E236A5544006CC679 /* Entities */,
-				7E6D8587236A4C2C006CC679 /* PostViewCell */,
 				7E6D8567236A490E006CC679 /* AppDelegate.swift */,
+				7E6D858E236A5544006CC679 /* Entities */,
+				7E6D85AD236B877E006CC679 /* Views */,
+				7E6D8599236A5871006CC679 /* Presenter */,
+				7E6D859C236A595E006CC679 /* UseCases */,
+				7E40E75B236CC2F500F81A8F /* HelperClasses */,
 				7E6D856B236A490E006CC679 /* Main.storyboard */,
 				7E6D856E236A490F006CC679 /* Assets.xcassets */,
 				7E6D8570236A490F006CC679 /* LaunchScreen.storyboard */,
@@ -205,9 +203,9 @@
 		7E6D859C236A595E006CC679 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D85A1236A5B62006CC679 /* Services */,
+				7E9565FA236D0EF1002AFCAB /* FetchPostsUseCase */,
 				7E6D85A6236A5DA3006CC679 /* UseCaseImpl.swift */,
-				7E6D859D236A5982006CC679 /* GetPosts.swift */,
-				7E6D859F236A5AC5006CC679 /* GetPostsImpl.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -235,10 +233,20 @@
 		7E6D85AD236B877E006CC679 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E6D8587236A4C2C006CC679 /* PostViewCell */,
 				7E6D8569236A490E006CC679 /* HomeViewController.swift */,
 				7E6D85AE236B87B1006CC679 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7E9565FA236D0EF1002AFCAB /* FetchPostsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7E6D859D236A5982006CC679 /* GetPosts.swift */,
+				7E6D859F236A5AC5006CC679 /* GetPostsImpl.swift */,
+			);
+			path = FetchPostsUseCase;
 			sourceTree = "<group>";
 		};
 		A78E46E0F2AF040FAD3093A5 /* Pods */ = {
